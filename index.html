@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>News</title>
+    <script>
+        var apiUrl = "https://newsapi.org/v2/top-headlines?sources=bbc-news,abc-news&sortBy=popularity&apiKey=c3b4386adc304fa3809ca730a4a74910";
+    </script>
+</head>
+
+<body class="h-screen">
+    <div id="page" class="flex flex-col">
+
+        <header id="header-main" class="flex justify-between p-4 border-b w-full z-50 fixed bg-white">
+            <div class="flex items-center">
+                <a href="index.html" class="cursor-pointer px-3 py-2 font-semibold hover:bg-slate-300 rounded-sm">Home</a>
+                <a href="popular.html"
+                    class="cursor-pointer px-3 py-2 font-semibold hover:bg-slate-300 rounded-sm">Popular</a>
+            </div>
+            <div class="relative max-h-12 justify-center right-3 md:left-12 items-center flex">
+                <a href=""><img src="images/newsLogo.jpg" alt="" id="logo" class="h-16 w-auto"></a>
+            </div>
+            <div class="flex justify-between w-28 md:w-64 border-slate-400 border px-2 gap-2 rounded-md">
+                <input type="text" id="searchBar" placeholder="Search" class="w-full">
+                <button class="font-semibold" id="searchButton"><img src="images/search-interface-symbol.png" alt="" class="h-6"></button>
+            </div>
+        </header>
+        <h1 class="relative top-36 m-auto sm:ml-36 text-6xl font-serif" id="main-heading">Latest</h1>
+        <div id="main-content" class="relative flex flex-row justify-center gap-8 flex-wrap px-6 py-8 top-52 mb-56 "></div>
+    
+    
+    
+        <footer class=" bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+            <div class=" w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#"
+                        class="hover:underline">News</a>. All Rights Reserved.
+                </span>
+                <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="/scripts/script.js"></script>
+</body>
+
+</html>
